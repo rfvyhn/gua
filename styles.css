@@ -2,6 +2,15 @@
   width: 336px;
   object-fit: cover;
 }
-.mywaigua-ad {
-  /*outline: 1px solid darkred;*/
+.promo-caption {
+  -vendor-animation-duration: 3s;
+  -vendor-animation-delay: 2s;
+  -vendor-animation-iteration-count: infinite;
+}
+.mywaigua-b {
+  margin-bottom: -70px;
+  margin-top: -220px;
+  opacity: 0;
+  position: relative;
+  z-index: 1;
 }
