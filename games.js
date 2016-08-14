@@ -11,6 +11,6 @@ const gameSchema = JM.makeConverter({
 
 module.exports = games.map(item => {
   item = gameSchema(item)
-  item.iconUrl = `/dist/images/${item.id}.jpg`
+  item.iconUrl = `/images/${item.id}.jpg`
   return item
 })
