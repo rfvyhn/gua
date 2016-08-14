@@ -1,5 +1,7 @@
 .hot-game-icon {
   width: 336px;
-  height: 280px;
   object-fit: cover;
+}
+.mywaigua-ad {
+  /*outline: 1px solid darkred;*/
 }
