@@ -1,0 +1,63 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    <link rel="stylesheet" href="../styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    block head
+
+  body
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+    nav.light-blue.lighten-1(role='navigation')
+      .nav-wrapper.container
+        block navContent
+
+    .container
+      .center-align: include ads/mywaigua-a
+
+      block bodyContent
+
+      .divider
+
+      h3 其它熱門線上遊戲外掛
+      small(style="color: red;") 建議參考使用360防毒以外的防毒軟體
+      .row
+        .col.m7.s12
+          .row
+            each hotGame in hotGames
+              .col.s12.center-align
+                h4: a(href=`./${hotGame.id}.html`) #{hotGame.name}外掛, BOT
+                img.hot-game-icon(src=hotGame.iconUrl)
+                .promo-caption #{hotGame.name}
+
+              .col.s12.center-align
+                h4: a(href=`./${hotGame.id}.html`) #{hotGame.name} - 公告下載區
+                include ads/mywaigua-b
+                .promo-caption: a(href=`./${hotGame.id}.html`) #{hotGame.name}外掛使用回報區
+
+        .col.m5.hide-on-small-only
+          include ads/mywaigua-d
+          include ads/mywaigua-d2
+          include ads/mywaigua-d3
+
+      .center-align: include ads/mywaigua-a2
+
+    footer.page-footer
+      .container
+        span.grey-text.text-lighten-4 本站為台灣非營利團體所建立的遊戲及外掛資訊交流平台，提供遊戲新聞、活動、外掛軟體使用問題...等訊息發佈。以輕鬆遊玩為主要目的，且強烈希冀不破壞遊戲平衡，讓任何人都能盡情享受遊戲，並在遊戲過程中有合理支出及花費等為建站宗旨。
+        span.grey-text.text-lighten-4 本站不會製作、經銷、代理外掛程式或免費提供外掛程式下載前之掃毒及掃木馬，協助會員遠離盜號危險程式等安全檢測驗證。本站所有資料均來自網際網路收集整理，說明文字暨下載連結轉載自原程式開發站。站上出現之公司名稱、遊戲名稱、程式等，商標及著作權，均歸各公司及程式原創所有。
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-82473301-1', 'auto');
+      ga('send', 'pageview');
